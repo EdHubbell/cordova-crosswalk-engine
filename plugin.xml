@@ -29,5 +29,10 @@
         <source-file src="src/android/XWalkCordovaCookieManager.java" target-dir="src/org/crosswalk/engine" />
 
         <framework src="libs/xwalk_core_library/xwalk.gradle" custom="true" type="gradleReference" />
+        
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        </config-file>
     </platform>
 </plugin>
